@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import "./App.css";
 import Navbar from "./Componenets/Navbar";
 import TextForm from "./Componenets/TextForm";
-// import About from "./Componenets/About";
 import Alert from './Componenets/Alert';
+// import About from './Componenets/About';
 
 function App() {
 
@@ -25,11 +25,13 @@ function App() {
       setMode('dark')
       document.body.style.backgroundColor = '#404040';
       showAlert("Dark mode has been enabled", "success");
+      document.title = 'TextEasy - Dark Mode';
     }
     else{
       setMode('light')
       document.body.style.backgroundColor = 'white';
       showAlert("Light mode has been enabled", "success");
+      document.title = 'TextEasy - Home'
     }
   }
   return (
