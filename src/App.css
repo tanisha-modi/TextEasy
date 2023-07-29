@@ -3,13 +3,6 @@
   height: 100vh;
   width: 100vw;
 }
-
-/* .border{
-  border: "4px solid blue";
-  margin-top: 10px;
-  margin: 10px;
-  margin-bottom: 150px;
-} */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -44,8 +37,3 @@
     transform: rotate(360deg);
   }
 }
-/* .custom-button{
-  position: fixed;
-  top: 80px;
-  right: -10px;
-} */
