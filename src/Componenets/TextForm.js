@@ -5,28 +5,27 @@ function TextForm(props) {
     const handleExtraSpaces = () => {
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "));
-        props.showAlert("Extra spaces removed", "success");
+        // props.showAlert("Extra spaces removed", "success");
     }
     const handleCopy = () => {
         let newText = document.getElementById("myBox");
         newText.select();
         navigator.clipboard.writeText(newText.value);
-        props.showAlert("Copied to Clipboard!", "success");
+        // props.showAlert("Copied to Clipboard!", "success");
     }
     const handleUpClick = () => {
         let newText = text.toUpperCase();
         setText(newText);
-        props.showAlert("Converted to Uppercase!", "success");
+        // props.showAlert("Converted to Uppercase!", "success");
     }
     const handleLowClick = () => {
         let newText = text.toLowerCase();
         setText(newText);
-        props.showAlert("Converted to Lowercase!", "success");
+        // props.showAlert("Converted to Lowercase!", "success");
     }
     const handleRemoveClick = () => {
-        // let newText = text.toLowerCase();
         setText('');
-        props.showAlert("Text Cleared!", "success");
+        // props.showAlert("Text Cleared!", "success");
     }
     const handleOnChange = (event) => {
         setText(event.target.value)
@@ -55,10 +54,12 @@ function TextForm(props) {
     </div>
     <div className="container my-3" style={{color: props.mode === 'dark' ? 'white' : '#212529', textAlign: "left"}} >
         <h2>Your text summary</h2>
-        <p> {text.split(" ").length} words and {text.length} characters</p>
+        {/* <p> {text.split(" ").length} words and {text.length} characters</p> */}
+        <p>Words = {text.trim(" ").split(" ").filter( (e) => e !=="").length} words</p>
+        <p>Characters = {text.length} characters</p>
         <p> Takes { 0.008 * text.split(" ").length} minutes to read on average </p>
-        <h2>Preview</h2>
-        <p className="border">{text.length >0? text : "Enter something in textbox to preview here"}</p>
+        {/* <h2>Preview</h2>
+        <p className="border">{text.length >0? text : "Enter something in textbox to preview here"}</p> */}
     </div>
     </>
   );
