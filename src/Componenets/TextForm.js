@@ -57,7 +57,7 @@ function TextForm(props) {
         {/* <p> {text.split(" ").length} words and {text.length} characters</p> */}
         <p>Words = {text.trim(" ").split(" ").filter( (e) => e !=="").length} words</p>
         <p>Characters = {text.length} characters</p>
-        <p> Takes { 0.008 * text.split(" ").length} minutes to read on average </p>
+        <p> Takes { text.trim(" ").split(" ").filter( (e) => e !=="").length ? 0.48 * text.split(" ").length : 0} seconds to read on average </p>
         {/* <h2>Preview</h2>
         <p className="border">{text.length >0? text : "Enter something in textbox to preview here"}</p> */}
     </div>
