@@ -53,8 +53,8 @@ function App() {
           element = {<TextForm heading="Welcome to TextEasy - the ultimate word counter" mode={mode} toggleMode={toggleMode} showAlert={showAlert}/>}
           />
         </Routes>
-
-         {/* <TextForm heading="Welcome to TextEasy" mode={mode} toggleMode={toggleMode} /* showAlert={showAlert}*/}
+{/* <TextForm heading="Welcome to TextEasy - the ultimate word counter" mode={mode} toggleMode={toggleMode} showAlert={showAlert}/>  */}
+          
       </div>
       </Router>
     </div>
