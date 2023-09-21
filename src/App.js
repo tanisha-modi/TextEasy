@@ -49,7 +49,7 @@ function App() {
           <Route exact path="/about"
             element = {<About mode={mode}/>}
           />
-          <Route exact path="/"
+          <Route path="/"
           element = {<TextForm heading="Welcome to TextEasy - the ultimate word counter" mode={mode} toggleMode={toggleMode} showAlert={showAlert}/>}
           />
         </Routes>
